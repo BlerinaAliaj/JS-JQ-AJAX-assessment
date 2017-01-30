@@ -305,14 +305,15 @@ function playGuessingGame(evt) {
 
   // put your code here
 
-  function postAttack(){
+  function postAttack(evt){
 
     var name = $("#victim-name").val();
 
     $.post("/t-rex-attack.json", name, showTRexResults);
+
   }
 
-  postAttack();
+  $("#t-rex-form").on("submit", postAttack);
 
 </script>
 
